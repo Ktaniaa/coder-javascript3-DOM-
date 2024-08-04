@@ -69,23 +69,9 @@ if(pedido.length > 0){
     function gustoMaspedido(gusto){
         return gusto.nombre === "Jamón y Queso";
     }
-    pedido.find(gustoMaspedido) === undefined ? textoResumen += `<p>Le recomendamos incluir el gusto más pedido del mes Jamón y Queso dentro de su pedido </p>`: textoResumen += `<p>Su pedido incluye el gusto más pedido del mes - Jamón y Queso</p>`;
+    pedido.find(gustoMaspedido) === undefined ? textoResumen += `<p>Le recomendamos incluir el gusto más pedido del mes "Jamón y Queso" dentro de su pedido </p>`: textoResumen += `<p>Su pedido incluye el gusto más pedido del mes - Jamón y Queso</p>`;
     pedidoResumen.innerHTML = textoResumen;
     pedidoResumen.className = "resumenCarrito";
     divItemsPedido.appendChild(pedidoResumen);
     
 }
-
-
-/*MOSTRAR PEDIDO
-precio > 10000 ? console.log(`El precio de su pedido es : $${valorTotal = descuentoPromo (precio)} (con valor promocional aplicado "-10%")`) : console.log(`El precio de su pedido es : $${precio}`) ;
-for(let i=0;i<pedido.length;i++){
-    console.log(`${pedido[i].cantidad}x de ${pedido[i].nombre}`);
-}
-
-//BUSQUEDA DEL GUSTO MÁS PEDIDO
-function gustoMaspedido(gusto){
-    return gusto.nombre === "Jamón y Queso";
-}
-pedido.find(gustoMaspedido) === undefined ? console.log("Le recomendamos incluir el gusto más pedido del mes - Jamón y Queso"):console.log("Su pedido incluye el gusto más pedido del mes - Jamón y Queso");
-*/
